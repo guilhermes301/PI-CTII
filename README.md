@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💈 BarberPro - Sistema de Agendamento PWA
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -163,3 +164,7 @@ Clique em "Instalar BarberPro".
 
 👨‍💻 Autor
 Desenvolvido por Josimar. Aluno do curso Técnico em Informática para a Internet - IFSC.
+
+Projeto Integrador II 
+1a Reunião de alinhamento 21/03/2026 19:30
+ c89bbd7f362ec84ce4f32a75b316a554033b648d
