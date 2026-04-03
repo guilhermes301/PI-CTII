@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { HomeScreen } from './components/home/HomeScreen';
+
 import { 
   Scissors, Calendar, Clock, ArrowLeft, 
   MessageCircle, Moon, Sun, Lock, ShieldCheck, UserPlus, Trash2, User, 
