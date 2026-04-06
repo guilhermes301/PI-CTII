@@ -108,7 +108,8 @@ Desenvolvido por Christiane Peresutti, Guilherme Selhorst, Josimar Pereira e Luc
 
 Projeto Integrador II 
 1a Reunião de alinhamento 21/03/2026 19:30
-2a Reuniçao de alinhamento 03/04/2026 10:00
+
+2a Reunião de alinhamento 03/04/2026 10:00
 
 
  c89bbd7f362ec84ce4f32a75b316a554033b648d
