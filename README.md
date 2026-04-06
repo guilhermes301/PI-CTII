@@ -43,7 +43,6 @@ Pré-requisitos: Você precisa ter o [Node.js](https://nodejs.org/) instalado.
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-> Projeto desenvolvido para a disciplina de Dispositivos Móveis do curso Técnico em Informática para a Internet no **IFSC**.
 
 ## 📱 Sobre o Projeto
 
@@ -54,10 +53,9 @@ O projeto foi construído com foco em performance, usabilidade móvel (Mobile Fi
 ## ✨ Funcionalidades Principais
 
 ### 👤 Para o Cliente
-- **📱 PWA Instalável:** Pode ser instalado no celular como um app nativo.
 - **🔐 Cadastro e Login:** Fluxo seguro onde o cliente precisa se identificar para agendar.
 - **📅 Agendamento Inteligente:** Seleção de serviço, barbeiro, data e hora.
-- **🚫 Prevenção de Erros:** O sistema bloqueia datas passadas, domingos e horários fora do expediente.
+- **🚫 Prevenção de Erros:** O sistema bloqueia datas passadas e horários fora do expediente.
 - **🛡️ Privacidade:** O cliente vê apenas os seus próprios agendamentos.
 - **❌ Gestão de Horários:** Possibilidade de cancelar ou reagendar serviços facilmente.
 - **🌓 Dark Mode:** Alternância entre tema claro e escuro.
@@ -105,9 +103,12 @@ No Google Chrome, observe o ícone de instalação na barra de endereço (lado d
 
 Clique em "Instalar BarberPro".
 
-👨‍💻 Autor
-Desenvolvido por Josimar. Aluno do curso Técnico em Informática para a Internet - IFSC.
+👨‍💻 Autores
+Desenvolvido por Christiane Peresutti, Guilherme Selhorst, Josimar Pereira e Lucas Guerra. Alunos do curso Técnico em Informática para a Internet - IFSC.
 
 Projeto Integrador II 
 1a Reunião de alinhamento 21/03/2026 19:30
+2a Reuniçao de alinhamento 03/04/2026 10:00
+
+
  c89bbd7f362ec84ce4f32a75b316a554033b648d
