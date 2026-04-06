@@ -104,7 +104,8 @@ No Google Chrome, observe o ícone de instalação na barra de endereço (lado d
 Clique em "Instalar BarberPro".
 
 👨‍💻 Autores
-Desenvolvido por Christiane Peresutti, Guilherme Selhorst, Josimar Pereira e Lucas Guerra. Alunos do curso Técnico em Informática para a Internet - IFSC.
+
+Desenvolvido por: Christiane Peresutti, Guilherme Selhorst, Josimar Pereira e Lucas Guerra. Alunos do curso Técnico em Informática para a Internet - IFSC.
 
 Projeto Integrador II 
 
