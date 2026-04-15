@@ -50,7 +50,7 @@ const SEED_SERVICES: Service[] = [
 const SEED_BARBERS: Barber[] = [
   {
     id: 1,
-    name: 'Josimar Admin',
+    name: 'Josimar (Dono)',
     email: 'josimar@barbearia.com',
     password: '123456',
   },

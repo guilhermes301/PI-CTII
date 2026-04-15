@@ -36,7 +36,6 @@ export function useAuth() {
     } else {
       localStorage.removeItem(USER_STORAGE_KEY);
     }
-
     setCurrentUser(user);
   };
 
@@ -46,7 +45,6 @@ export function useAuth() {
     } else {
       localStorage.removeItem(BARBER_STORAGE_KEY);
     }
-
     setCurrentBarber(barber);
   };
 
@@ -54,7 +52,6 @@ export function useAuth() {
 
   const login = () => {
     const user = loginUser(authData.email, authData.password);
-    persistBarber(null);
     persistUser(user);
     resetAuthForm();
     return user;
@@ -62,7 +59,6 @@ export function useAuth() {
 
   const loginBarberSession = () => {
     const barber = loginBarber(authData.email, authData.password);
-    persistUser(null);
     persistBarber(barber);
     resetAuthForm();
     return barber;
@@ -76,7 +72,6 @@ export function useAuth() {
       password: authData.password,
     });
 
-    persistBarber(null);
     persistUser(user);
     resetAuthForm();
     return user;

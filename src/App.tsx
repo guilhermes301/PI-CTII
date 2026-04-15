@@ -29,7 +29,6 @@ function App() {
   const [barberErrorMsg, setBarberErrorMsg] = useState('');
 
   const { darkMode, setDarkMode } = useTheme();
-
   const {
     currentUser,
     currentBarber,
@@ -248,7 +247,6 @@ function App() {
             services={servicesList}
             darkMode={darkMode}
             onOpenLogin={handleOpenLogin}
-            onOpenBarberLogin={handleOpenBarberLogin}
             onSelectService={handleSelectService}
           />
         );
@@ -387,25 +385,35 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen font-sans transition-colors duration-300 ${
-        darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-50 text-slate-900'
-      }`}
+      className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-50 text-slate-900'
+        }`}
     >
       <Header
         darkMode={darkMode}
         currentUser={currentUser}
-        currentBarber={currentBarber}
         onGoHome={goHome}
         onToggleDarkMode={() => setDarkMode(!darkMode)}
         onOpenLogin={handleOpenLogin}
         onOpenAdmin={() => setStep('admin-login')}
         onOpenMyAppointments={handleOpenMyAppointments}
-        onOpenBarberPanel={() => setStep('barber-panel')}
         onLogout={handleLogout}
-        onLogoutBarber={handleBarberLogout}
       />
 
-      <main className="mx-auto max-w-md p-4 pb-20">{renderCurrentScreen()}</main>
+      <main className="mx-auto max-w-md p-4 pb-20">
+        {renderCurrentScreen()}
+
+        {step === 'home' && (
+          <div className="mt-4 flex justify-center">
+            <button
+              type="button"
+              onClick={handleOpenBarberLogin}
+              className="rounded-xl border border-zinc-700 px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            >
+              Área do Barbeiro
+            </button>
+          </div>
+        )}
+      </main>
     </div>
   );
 }
