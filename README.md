@@ -1,6 +1,6 @@
 ## 📱 Sobre o Projeto
 
-O **BarberPro** é um sistema web progressivo (PWA) desenvolvido para modernizar o agendamento de serviços em barbearias. O aplicativo resolve problemas comuns de conflito de horários e falta de organização, oferecendo uma experiência fluida tanto para o cliente quanto para o administrador.
+O **PlannerBarber** é um sistema web progressivo (PWA) desenvolvido para modernizar o agendamento de serviços em barbearias. O aplicativo resolve problemas comuns de conflito de horários e falta de organização, oferecendo uma experiência fluida tanto para o cliente quanto para o administrador.
 
 O projeto foi construído com foco em performance, usabilidade móvel (Mobile First) e funcionamento offline (PWA).
 
