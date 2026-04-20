@@ -59,16 +59,10 @@ http://localhost:5173
 Como o sistema usa LocalStorage, ele inicia sem dados.
 
 👑 Admin (Dono)
+
 Acesso pelo ícone de cadeado na tela inicial ou login
 Senha: admin123
-📱 Funcionalidade PWA
 
-Você pode instalar o app como aplicativo no seu dispositivo:
-
-Execute o projeto
-Abra no Google Chrome
-Clique no ícone de instalação na barra de endereço
-Instale o app
 
 👨‍💻 Autores
 
