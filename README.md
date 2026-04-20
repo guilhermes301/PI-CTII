@@ -69,20 +69,7 @@ Execute o projeto
 Abra no Google Chrome
 Clique no ícone de instalação na barra de endereço
 Instale o app
-📂 Estrutura do Projeto
-src/
- ├── components/
- │   ├── admin/
- │   ├── auth/
- │   ├── barber/
- │   ├── booking/
- │   ├── home/
- │   └── layout/
- ├── hooks/
- ├── assets/
- └── App.tsx
 
- 
 👨‍💻 Autores
 
 Projeto desenvolvido por:
