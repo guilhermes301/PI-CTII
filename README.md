@@ -69,12 +69,18 @@ Senha: admin123
 Projeto desenvolvido por:
 
 Christiane Peresutti
+
 Guilherme Selhorst
+
 Josimar Pereira
+
 Lucas Guerra
 
 Curso Técnico em Informática para Internet — IFSC
 
+
 📅 Histórico do Projeto
+
 1ª Reunião: 21/03/2026 19:30
+
 2ª Reunião: 03/04/2026 10:00
