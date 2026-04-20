@@ -56,11 +56,11 @@ A aplicação estará disponível em:
 http://localhost:5173
 🔐 Acesso para Testes
 
-Como o sistema usa LocalStorage, ele inicia sem dados.
 
 👑 Admin (Dono)
 
 Acesso pelo ícone de cadeado na tela inicial ou login
+
 Senha: admin123
 
 
