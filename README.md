@@ -1,71 +1,99 @@
-## 📱 Sobre o Projeto
+💈 BarberApp
 
-O **PlannerBarber** é um sistema web progressivo (PWA) desenvolvido para modernizar o agendamento de serviços em barbearias. O aplicativo resolve problemas comuns de conflito de horários e falta de organização, oferecendo uma experiência fluida tanto para o cliente quanto para o administrador.
+Sistema para gestão de agendamentos em barbearias, desenvolvido como Projeto Integrador do curso Técnico em Informática para Internet (IFSC).
 
-O projeto foi construído com foco em performance, usabilidade móvel (Mobile First) e funcionamento offline (PWA).
+📌 Visão Geral
 
-## ✨ Funcionalidades Principais
+O BarberApp foi criado para resolver problemas comuns de organização em barbearias, como conflitos de horários, falta de controle de agenda e dificuldade na gestão de clientes.
 
-### 👤 Para o Cliente
-- **🔐 Cadastro e Login:** Fluxo seguro onde o cliente precisa se identificar para agendar.
-- **📅 Agendamento Inteligente:** Seleção de serviço, barbeiro, data e hora.
-- **🚫 Prevenção de Erros:** O sistema bloqueia datas passadas e horários fora do expediente.
-- **🛡️ Privacidade:** O cliente vê apenas os seus próprios agendamentos.
-- **❌ Gestão de Horários:** Possibilidade de cancelar ou reagendar serviços facilmente.
-- **🌓 Dark Mode:** Alternância entre tema claro e escuro.
+A aplicação oferece uma experiência moderna, responsiva e funcional tanto para clientes quanto para administradores.
 
-### 🛡️ Para o Administrador (Dono)
-- **Painel de Gestão:** Visão completa de todos os agendamentos de todos os clientes.
-- **Gestão de Equipe:** Adicionar e remover barbeiros dinamicamente.
-- **Histórico:** Visualização de agendamentos cancelados e confirmados.
+🚀 Funcionalidades
 
-## 🛠️ Tecnologias Utilizadas
+👤 Cliente
+Cadastro e login de usuário
+Agendamento de serviços com:
+Escolha de barbeiro
+Data e horário
+Visualização dos próprios agendamentos
+Cancelamento e reagendamento
+Bloqueio de horários inválidos (passados ou fora do expediente)
+Interface com suporte a modo claro/escuro
 
-- **Frontend:** React.js + TypeScript
-- **Build Tool:** Vite
-- **Estilização:** Tailwind CSS
-- **Ícones:** Lucide React
-- **Manipulação de Datas:** Date-fns
-- **Banco de Dados:** LocalStorage (Simulação de persistência local para MVP)
-- **PWA:** Vite Plugin PWA
+🛠️ Administrador
+Painel completo de gerenciamento
+Visualização de todos os agendamentos
+Controle de barbeiros (adicionar/remover)
+Acesso ao histórico de atendimentos (confirmados/cancelados)
 
-## 🚀 Como Rodar o Projeto
+🧪 Tecnologias Utilizadas
+Frontend: React + TypeScript
+Build Tool: Vite
+Estilização: Tailwind CSS
+Ícones: Lucide React
+Datas: date-fns
+Persistência: LocalStorage (MVP)
+PWA: Vite Plugin PWA
 
-Pré-requisitos: Você precisa ter o [Node.js](https://nodejs.org/) instalado.
+⚙️ Como Executar o Projeto
+Pré-requisitos
+Node.js instalado (recomendado versão LTS)
+Passos
+# Clone o repositório
+git clone https://github.com/guilhermes301/PI-CTII.git
 
-1. **Clone o repositório**
-   ```bash
-   git clone [https://github.com/Josimar-Pereira/Barber-app](https://github.com/Josimar-Pereira/Barber-app)
-   cd barber-app](https://github.com/SEU-USUARIO/barber-app.git)
-   cd barber-app
-   npm install
-   npm run dev
-   🧪 Credenciais para Teste
-Como o sistema utiliza LocalStorage, ao rodar pela primeira vez ele estará vazio. Utilize as credenciais abaixo para testar as funcionalidades administrativas:
+# Acesse a pasta
+cd PI-CTII
 
-🔐 Acesso Administrativo (Dono)
-Para acessar o painel do dono, clique no ícone de Cadeado na tela de Login ou na Home.
+# Instale as dependências
+npm install
 
+# Rode o projeto
+npm run dev
+
+A aplicação estará disponível em:
+
+http://localhost:5173
+🔐 Acesso para Testes
+
+Como o sistema usa LocalStorage, ele inicia sem dados.
+
+👑 Admin (Dono)
+Acesso pelo ícone de cadeado na tela inicial ou login
 Senha: admin123
+📱 Funcionalidade PWA
 
-📱 Como Testar o PWA
-Para testar a instalação do aplicativo no computador:
+Você pode instalar o app como aplicativo no seu dispositivo:
 
-Rode o projeto (npm run dev).
+Execute o projeto
+Abra no Google Chrome
+Clique no ícone de instalação na barra de endereço
+Instale o app
+📂 Estrutura do Projeto
+src/
+ ├── components/
+ │   ├── admin/
+ │   ├── auth/
+ │   ├── barber/
+ │   ├── booking/
+ │   ├── home/
+ │   └── layout/
+ ├── hooks/
+ ├── assets/
+ └── App.tsx
 
-No Google Chrome, observe o ícone de instalação na barra de endereço (lado direito).
-
-Clique em "Instalar BarberPro".
-
+ 
 👨‍💻 Autores
 
-Desenvolvido por: Christiane Peresutti, Guilherme Selhorst, Josimar Pereira e Lucas Guerra. Alunos do curso Técnico em Informática para a Internet - IFSC.
+Projeto desenvolvido por:
 
-Projeto Integrador II 
+Christiane Peresutti
+Guilherme Selhorst
+Josimar Pereira
+Lucas Guerra
 
-1a Reunião de alinhamento 21/03/2026 19:30
+Curso Técnico em Informática para Internet — IFSC
 
-2a Reunião de alinhamento 03/04/2026 10:00
-
-
- c89bbd7f362ec84ce4f32a75b316a554033b648d
+📅 Histórico do Projeto
+1ª Reunião: 21/03/2026 19:30
+2ª Reunião: 03/04/2026 10:00
