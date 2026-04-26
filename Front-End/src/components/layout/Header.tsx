@@ -1,4 +1,4 @@
-import { Lock, LogOut, Moon, Scissors, Sun } from 'lucide-react';
+import { LogOut, Moon, Scissors, Sun } from 'lucide-react';
 import type { User } from '../../lib/db';
 import { getUserInitial } from '../../utils/format';
 
@@ -8,7 +8,6 @@ interface HeaderProps {
   onGoHome: () => void;
   onToggleDarkMode: () => void;
   onOpenLogin: () => void;
-  onOpenAdmin: () => void;
   onOpenMyAppointments: () => void;
   onLogout: () => void;
 }
@@ -19,7 +18,6 @@ export function Header({
   onGoHome,
   onToggleDarkMode,
   onOpenLogin,
-  onOpenAdmin,
   onOpenMyAppointments,
   onLogout,
 }: HeaderProps) {
@@ -57,9 +55,6 @@ export function Header({
                 className="text-sm font-bold text-slate-600 hover:text-yellow-500 dark:text-slate-300"
               >
                 Entrar
-              </button>
-              <button onClick={onOpenAdmin} title="Área do Dono">
-                <Lock size={18} className="text-slate-400 hover:text-yellow-500" />
               </button>
             </div>
           )}

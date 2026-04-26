@@ -341,8 +341,6 @@ function App() {
         onGoHome={goHome}
         onToggleDarkMode={() => setDarkMode(!darkMode)}
         onOpenLogin={handleOpenLogin}
-        // O AdminPanel agora só abre se o usuário atual for is_admin
-        onOpenAdmin={() => currentUser?.is_admin ? setStep('admin-panel') : alert('Acesso restrito.')}
         onOpenMyAppointments={handleOpenMyAppointments}
         onLogout={handleLogout}
       />
