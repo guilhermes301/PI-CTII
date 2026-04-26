@@ -1,50 +1,104 @@
-# 💈 BarberPro - Sistema de Agendamento PWA
+# 💈 BarberPro - Sistema de Agendamento Full-Stack (PWA)
 
-Projeto desenvolvido para a disciplina de **Projeto Integrador II** do curso Técnico em Informática para a Internet no **IFSC**.
+[![IFSC](https://img.shields.io/badge/Instituição-IFSC-green)](https://www.ifsc.edu.br/)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js-339933)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/Frontend-React-61DAFB)](https://reactjs.org/)
+[![MariaDB](https://img.shields.io/badge/Database-MariaDB-003545)](https://mariadb.org/)
 
-## 📱 Sobre o Projeto
-O **BarberPro** é um sistema web progressivo (PWA) criado para modernizar o agendamento de serviços em barbearias. Ele resolve conflitos de horários e automatiza a gestão, oferecendo uma experiência fluida com foco em dispositivos móveis (Mobile First).
+O **BarberPro** é uma solução completa para gestão de agendamentos em barbearias, desenvolvida como Projeto Integrador para o curso Técnico em Informática para a Internet. O sistema utiliza uma arquitetura moderna, separando as responsabilidades entre um servidor robusto e uma interface progressiva (PWA).
 
-## ✨ Funcionalidades Principais
+---
 
-### 👤 Área do Cliente
-- **📱 PWA Instalável:** Use como um aplicativo nativo no celular.
-- **🔐 Cadastro/Login:** Acesso seguro com persistência de dados.
-- **📅 Agendamento:** Escolha de serviço, barbeiro, data e hora com validação em tempo real.
-- **🚫 Regras de Negócio:** Bloqueio de domingos, datas passadas e horários fora do expediente.
-- **🌓 Tema:** Suporte a Modo Claro e Escuro (Dark Mode).
+## Tecnologias e Ferramentas
 
-### ✂️ Área do Barbeiro & Admin
-- **📅 Painel de Controle:** Gestão de status (Pendente, Confirmado, Cancelado).
-- **👥 Gestão de Equipe:** O administrador pode gerenciar profissionais.
-- **📊 Visão Geral:** Controle total sobre todos os serviços agendados no banco de dados.
+- **Frontend:** React + TypeScript, Tailwind CSS, Lucide Icons, Vite.
+- **Backend:** Node.js, Express, MySQL2.
+- **Banco de Dados:** MariaDB / MySQL.
+- **PWA:** Suporte a instalação mobile e funcionamento offline.
 
-## 🛠️ Tecnologias Utilizadas
-- **Frontend:** React.js + TypeScript (Vite)
-- **Backend:** Node.js + Express
-- **Banco de Dados:** MariaDB (Integração completa via MySQL2)
-- **Estilização:** Tailwind CSS & Lucide React (Ícones)
-- **PWA:** Vite Plugin PWA
+---
 
-## Como Instalar e Rodar o Projeto
+## Guia de Instalação e Execução
 
 ### 1. Pré-requisitos
-Certifique-se de ter o **Node.js** e o **MariaDB** instalados em sua máquina.
+Independente do sistema, você precisará de:
+- **Node.js** (Versão 18 ou superior)
+- **Git**
+- **MariaDB** ou **MySQL** rodando localmente.
 
-### 2. Configurar o Back-end
-```bash
-cd barber-backend
+---
+
+### 🐧 Instalação no Linux (Debian/Ubuntu/Pop!_OS)
+1. Abra o terminal e clone o projeto:
+   ```bash
+   git clone [https://github.com/guilhermes301/PI-CTII.git](https://github.com/guilhermes301/PI-CTII.git)
+   cd PI-CTII
+
+    Configure o Banco de Dados:
+
+        Importe o arquivo em barber-backend/database/barberapp_database.sql usando o comando:
+    Bash
+
+mariadb -u seu_usuario -p < barber-backend/database/barberapp_database.sql
+
+Instale e rode o Backend:
+Bash
+
+cd barber-backend && npm install && node server.js
+
+Em outro terminal, instale e rode o Frontend:
+Bash
+
+    cd Front-End && npm install && npm run dev
+
+🪟 Instalação no Windows
+
+    Baixe o projeto como ZIP ou use o Git Bash:
+    Bash
+
+git clone [https://github.com/guilhermes301/PI-CTII.git](https://github.com/guilhermes301/PI-CTII.git)
+
+Configure o Banco de Dados:
+
+    Use o HeidiSQL ou MySQL Workbench para abrir e executar o script SQL localizado em barber-backend/database.
+
+Execute o Backend:
+
+    Abra o CMD ou PowerShell na pasta barber-backend:
+
+PowerShell
+
 npm install
-# Configure suas credenciais no arquivo .env
 node server.js
 
-cd Front-End
-npm install
-npm run dev
+Execute o Frontend:
 
-Autores
+    Abra outro CMD na pasta Front-End:
 
-    Josimar Pereira
+PowerShell
+
+    npm install
+    npm run dev
+
+🍎 Instalação no macOS
+
+    Use o Terminal:
+    Bash
+
+    git clone [https://github.com/guilhermes301/PI-CTII.git](https://github.com/guilhermes301/PI-CTII.git)
+    cd PI-CTII
+
+    Configure o Banco:
+
+        Utilize o Sequel Ace ou linha de comando para importar o arquivo .sql.
+
+    Inicie os serviços:
+
+        Siga os mesmos comandos do Linux utilizando o npm install e npm run dev nas respectivas pastas.
+
+👥 Autores
+
+    Josimar Bitencourt Pereira
 
     Lucas
 
