@@ -40,3 +40,6 @@ thumbs.db
 # --- Arquivos Temporários ---
 .cache/
 .eslintcache
+
+# Arquivos de Cache do PWA
+dev-dist/
