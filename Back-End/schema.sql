@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS agendamentos (
 
 -- Criando o usuário Administrador (A senha real deve ser criptografada na API)
 INSERT INTO usuarios (nome, email, telefone, senha, is_admin)
-VALUES ('Josimar Pereira', 'josimar@email.com', '51999999999', 'senha123', 1)
+VALUES ('Maria', 'maria@gmail.com', '0000000000', 'senha123', 0)
 ON DUPLICATE KEY UPDATE id=id;
 
 -- Inserindo os serviços padrão da barbearia
