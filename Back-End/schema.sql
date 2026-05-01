@@ -1,66 +1,46 @@
 -- =======================================================
--- Esquema do Banco de Dados - BarberPro
--- Banco de Dados: MariaDB / MySQL
+-- Esquema Oficial do Banco de Dados - BarberPro
+-- Extraído diretamente da modelagem do DBeaver
 -- =======================================================
 
 CREATE DATABASE IF NOT EXISTS barber_db;
 USE barber_db;
 
--- 1. Tabela de Usuários (Clientes e Administradores)
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    telefone VARCHAR(20),
-    senha VARCHAR(255) NOT NULL,
-    is_admin TINYINT(1) DEFAULT 0, -- 0 para cliente, 1 para admin
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+-- barber_db.barbeiros definição
+CREATE TABLE IF NOT EXISTS `barbeiros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `ativo` tinyint(1) DEFAULT 1,
+  `criado_em` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 2. Tabela de Barbeiros (Equipe)
-CREATE TABLE IF NOT EXISTS barbeiros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    ativo TINYINT(1) DEFAULT 1, -- 1 para ativo, 0 para inativo/removido
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+-- barber_db.usuarios definição
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `senha` varchar(255) NOT NULL,
+  `is_admin` tinyint(1) DEFAULT 0,
+  `criado_em` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 3. Tabela de Serviços
-CREATE TABLE IF NOT EXISTS servicos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
-    preco DECIMAL(10, 2) NOT NULL,
-    duracao_minutos INT NOT NULL,
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+-- barber_db.agendamentos definição
+CREATE TABLE IF NOT EXISTS `agendamentos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario_id` int(11) NOT NULL,
+  `barbeiro_id` int(11) NOT NULL,
+  `data_hora` datetime NOT NULL,
+  `status` enum('AGENDADO','CANCELADO','CONCLUIDO') DEFAULT 'AGENDADO',
+  `criado_em` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `usuario_id` (`usuario_id`),
+  KEY `barbeiro_id` (`barbeiro_id`),
+  CONSTRAINT `agendamentos_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `agendamentos_ibfk_2` FOREIGN KEY (`barbeiro_id`) REFERENCES `barbeiros` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 4. Tabela de Agendamentos
-CREATE TABLE IF NOT EXISTS agendamentos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    barbeiro_id INT NOT NULL,
-    servico_id INT NOT NULL,
-    data_agendamento DATE NOT NULL,
-    hora_agendamento TIME NOT NULL,
-    status VARCHAR(20) DEFAULT 'Confirmado', -- Ex: Confirmado, Cancelado, Concluído
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
-    FOREIGN KEY (barbeiro_id) REFERENCES barbeiros(id),
-    FOREIGN KEY (servico_id) REFERENCES servicos(id)
-);
 
--- =======================================================
--- Inserção de Dados Iniciais (Opcional - Apenas para testes)
--- =======================================================
-
--- Criando o usuário Administrador (A senha real deve ser criptografada na API)
-INSERT INTO usuarios (nome, email, telefone, senha, is_admin)
-VALUES ('Maria', 'maria@gmail.com', '0000000000', 'senha123', 0)
-ON DUPLICATE KEY UPDATE id=id;
-
--- Inserindo os serviços padrão da barbearia
-INSERT INTO servicos (nome, descricao, preco, duracao_minutos) VALUES
-('Corte Clássico', 'Corte tradicional.', 50.00, 30),
-('Barba Modelada', 'Toalha quente e navalha.', 35.00, 20),
-('Corte + Barba', 'Combo completo.', 75.00, 50);

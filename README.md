@@ -1,10 +1,10 @@
-# 💈 BarberPro - Sistema de Gestão de Barbearia
+# BarberPro - Sistema de Gestão de Barbearia
 
 O **BarberPro** é uma aplicação Full-Stack moderna para a gestão de agendamentos e profissionais de barbearia. O projeto foi desenvolvido com uma arquitetura separada (Decoupled), utilizando tecnologias de ponta para garantir performance e segurança.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### **Back-End (Servidor)**
 * **Node.js**: Ambiente de execução Javascript.
@@ -19,7 +19,7 @@ O **BarberPro** é uma aplicação Full-Stack moderna para a gestão de agendame
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 O repositório está organizado da seguinte forma:
 
@@ -28,7 +28,7 @@ O repositório está organizado da seguinte forma:
 
 ---
 
-## 🛠️ Como Executar o Projeto
+##  Como Executar o Projeto
 
 ### **1. Preparação da Base de Dados**
 Certifique-se de que o **MariaDB** está em execução no seu sistema.
